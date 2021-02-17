@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="js/slick/slick/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="js/slick/slick/slick.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick//slick/slick.min.js"></script>
+    <title>サンプルLPその1</title>
+    <script>
+    $(function(){
+      /*セクション1*/
+      $('#comp1_menu').css('display','none');
+      $('#comp1_menu_btn').click(function(){
+        $('#comp1_menu').fadeToggle(1000);
+          $('#comp1_menu a').click(function(){
+            $('#comp1_menu').fadeOut(1000);
+	    });
+      });
+      /*セクション1*/
+
+      /*セクション2*/
+      $('.comp2_slide').slick({
+          slidesToShow: 1,
+          arrows: false,
+          fade: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+      });
+
+      $('#comp2_title').css('display','none');
+              if (0 < 100){
+              $('#comp2_title').fadeIn(3000);
+              }
+      /*セクション2*/
+      
+      $('.comp3_slide').slick({
+          arrows:false,
+          asNavFor:'.comp3_thumb',
+      });
+      
+      $('.comp3_thumb').slick({
+          asNavFor:'.comp3_slide',
+          focusOnSelect: true,
+          slidesToShow:8,
+          slidesToScroll:1
+      });
+
+    });
+    </script>
+  </head>
+  <body>
+    <!-- セクション1 -->
+    <section id="component1">
+      <div id="comp1_header">
+        <div id="comp1_header_l">
+          <div id="comp1_logo">
+            <a href=""><img src="images/sample_logo.svg"></a>
+          </div>
+          <div id="comp1_devide"></div>
+          <div id="comp1_hotel_name">
+            <a href="">HOTEL ANTEROOM KYOTO</a>
+          </div>
+        </div>
+
+        <div id="comp1_header_r">
+          <ul>
+            <li><a href="">ご予約</a></li>
+            <li><a href="">客室</a></li>
+            <li><a href="">レストラン</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">住む</a></li>
+            <li><a href="">ニュース・イベント</a></li>
+            <li><a href="">ホテルについて</a></li>
+            <li><a href="">JP</a></li>
+          </ul>
+        </div>
+        <div id="comp1_menu_btn">
+          <p><a href="">MENU</a></p>
+        </div>
+      </div>
+      <!--
+      <div id="comp1_menu">
+        <ul>
+          <li><a href="">ご予約</a></li>
+          <li><a href="">客室</a></li>
+          <li><a href="">レストラン</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">住む</a></li>
+          <li><a href="">ニュース・イベント</a></li>
+          <li><a href="">ホテルについて</a></li>
+          <li><a href="">JP</a></li>
+        </ul>
+      </div>
+      -->
+    </section>
+    <!-- セクション1 -->
+      
+    <!-- セクション2 -->
+    <section id="component2">
+      <div id="comp2_title">
+        <p>ホテルタイトル</p>
+      </div>
+      <div id="comp2_slide">
+        <ul class="comp2_slide">
+          <li><img src="images/top1.jpg"></li>
+          <li><img src="images/top2.jpg"></li>
+          <li><img src="images/top3.jpg"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- セクション2 -->
+    
+    <!-- セクション3 -->
+    <section id="component3">
+      <div id="comp3_title"><h2>HOTEL ANTEROOM KYOTO</h2></div>
+      <div id="comp3_slider">
+        <ul class="comp3_slide">
+          <li><img src="images/second1.jpg" alt=""></li>
+          <li><img src="images/second2.jpg" alt=""></li>
+          <li><img src="images/second3.jpg" alt=""></li>
+          <li><img src="images/second4.jpg" alt=""></li>
+          <li><img src="images/second5.jpg" alt=""></li>
+          <li><img src="images/second6.jpg" alt=""></li>
+          <li><img src="images/second7.jpg" alt=""></li>
+          <li><img src="images/second8.jpg" alt=""></li>
+        </ul>
+        <ul class="comp3_thumb">
+          <li><img  src="images/second1.jpg" alt=""></li>
+          <li><img  src="images/second2.jpg" alt=""></li>
+          <li><img  src="images/second3.jpg" alt=""></li>
+          <li><img  src="images/second4.jpg" alt=""></li>
+          <li><img  src="images/second5.jpg" alt=""></li>
+          <li><img  src="images/second6.jpg" alt=""></li>
+          <li><img  src="images/second7.jpg" alt=""></li>
+          <li><img  src="images/second8.jpg" alt=""></li>
+        </ul>
+      </div>
+      <div id="comp3_text">
+        <div id="comp3_text_l">
+          <div id="comp3_text_l_inside">
+            <h2>ホテル アンテルーム 京都へようこそ</h2>
+            <p>
+            HOTEL ANTEROOM KYOTOは、2011年当時、
+            学生寮として使用されてきた建物をコンバージョンしオープンしたホテル＆アパートメントです。<br>
+            館内には、ギャラリー・朝食レストラン・バーを併設。2016年のリニューアルでは新たに67室が加わり全128室の客室と50室のアパートメントとなり、
+            コンセプトである「アート＆カルチャー」に新たに「和」が加わりました。<br>
+            アンテルームではそれら3つのテーマを現在進行形の視点で捉え、「京都の今」を発信しています。
+            </p>
+          </div>
+        </div>
+        <div id="comp3_text_r">
+          <div id="comp3_border"></div>
+          <p>京都府京都市南区東九条明田町7番</p>
+          <p>JR京都駅八条東口より徒歩15分</p>
+          <p>地下鉄烏丸線九条駅より徒歩８分</p>
+          <p>東寺まで徒歩18分</p>
+          <p>075-681-5656</p>
+          <img src="images/sample_service.png">
+        </div>
+      </div>
+    </section>
+    <!-- セクション3 -->
+
+    <!-- セクション4 -->
+    <section id="component4">
+      <div id="comp4_inner">
+        <div id="comp4_title">
+            <h2>Rooms</h2>
+            <p>客室</p>
+        </div>
+
+        <div class="comp4_room">
+          <div id="comp4_border1">
+          </div>
+          <div class="comp4_subtitle">
+            <h2>CONCEPT ROOMS</h2>
+            <p>コンセプトルーム</p>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room1.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room2.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room3.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room4.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room5.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room6.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room7.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room8.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp4_box">
+            <div class="comp4_box_left" style="background-image: url(images/sample_room9.jpg)"></div>
+            <div class="comp4_box_right">
+              <div class="comp4_textbox">
+                <div class="comp4_border2"></div>
+                  <div class="comp4_text">
+                    <h2>Concept Room No.152</h2>
+                    <div class="comp4_text_detail"></div>
+                    <p>広さ：40㎡ 定員：1-2名 部屋数：1室</p>
+                    <p>浴室：バス・トイレセパレート 階数：1階</p>
+                    <p>ベッド：W1200mm x 2000mm</p>
+                  </div>
+                  <div class="comp4_detail_btn">
+                    <p>detail</p>
+                  </div>
+                <div class="comp4_book">  
+                  <div class="comp4_border3"></div>
+                  <div class="comp4_book_inner">
+                    <div class="comp4_price">価格 <span class="comp4_text_empha">¥22,000〜</span>/1室1泊</div>
+                    <div class="comp4_book_btn">
+                      <a href=""><p >予約する</p></a>
+                    </div>
+                  </div>
+                  <div class="comp4_border3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+    </section>
+    <!-- セクション4 -->
+
+    <!-- セクション5 -->
+
+    <!-- セクション5 -->
+  </body>
+</html>  
